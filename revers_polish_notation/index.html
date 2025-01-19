@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обратная польская нотация</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Обратная польская нотация</h1>
+    </header>
+    <main>
+      <section>
+        <label for="expression">Выражение:</label>
+        <input
+          id="expression"
+          type="text"
+          placeholder="Математическое выражение"
+          class="original-expression"
+        />
+        <p id="error" class="error"></p>
+        <button id="calculations">Вычеслить</button>
+      </section>
+      <section>
+        <label for="polish-notation">Выражение:</label>
+        <input
+          id="polish-notation"
+          type="text"
+          placeholder="Обратная польская нотация"
+          class="revers-polish-notation"
+          readonly
+        />
+      </section>
+      <p id="result">Результат вычислений:</p>
+    </main>
+
+    <script src="polish_notation.js"></script>
+  </body>
+</html>
