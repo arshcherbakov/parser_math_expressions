@@ -140,15 +140,14 @@ const cleanData = () => {
   resultCalculation = "";
 };
 
-const outputQueueToString = () => {
-  let result = "";
-
-  outputQueue.forEach((token) => {
-    token.operator ? (result += token.operator) : (result += token);
-  });
-
-  return result;
-};
+const outputQueueToString = () =>
+  outputQueue.reduce(
+    (resultString, token) =>
+      token.operator
+        ? (resultString += token.operator)
+        : (resultString += token),
+    ""
+  );
 
 const getResultCalculation = () => resultCalculation;
 
